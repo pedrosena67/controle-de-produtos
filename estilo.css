@@ -242,3 +242,34 @@ td:last-child {
   td:nth-of-type(4)::before { content: "Preço:"; }
   td:nth-of-type(5)::before { content: "Ações:"; }
 }
+
+.resumo-estoque {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f5f9;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border: 1px solid #e2e8f0;
+}
+
+.resumo-estoque p {
+    font-size: 1rem;
+    color: #475569;
+    margin: 0;
+}
+
+.resumo-estoque strong {
+    font-size: 1.2rem;
+    color: #1e293b;
+    margin-left: 8px;
+}
+
+@media screen and (max-width: 600px) {
+    .resumo-estoque {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
