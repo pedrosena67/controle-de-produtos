@@ -121,6 +121,11 @@ th {
     padding: 8px 16px;
     border-radius: 4px;
     cursor: pointer;
+
+#btn-cancelar {
+    display: none;
+}
+
 }
 @media (max-width: 768px) {
     body {
