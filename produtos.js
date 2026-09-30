@@ -9,10 +9,10 @@ let produtos = JSON.parse(localStorage.getItem('produtos_estoque')) || [];
     const btnCancelar = document.getElementById('btn-cancelar');
     const tabela = document.getElementById('tabela-produtos');
     const inputBusca = document.getElementById('input-busca');
-
-inputNome.addEventListener('input', verificarPreenchimento);
-inputQuantidade.addEventListener('input', verificarPreenchimento);
-inputPreco.addEventListener('input', verificarPreenchimento);
+    
+    inputNome.addEventListener('input', verificarPreenchimento);
+    inputQuantidade.addEventListener('input', verificarPreenchimento);
+    inputPreco.addEventListener('input', verificarPreenchimento);
 
 if (inputBusca) {
     inputBusca.addEventListener('input', function() {
@@ -75,7 +75,7 @@ function renderizarTabela(filtro = '') {
 
         tr.innerHTML = `
             <td>#${prod.id}</td>
-            <td>${prod.nome} ${prod.quantidade <= 9 ? '⚠️ (Baixo)' : ''}</td>
+            <td>${prod.nome} ${prod.quantidade <= 9 ? '⚠️ <strong>(Baixo)' : ''}</td>
             <td>${prod.quantidade}</td>
             <td>R$ ${prod.preco.toFixed(2)}</td>
             <td>
